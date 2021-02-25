@@ -1,17 +1,14 @@
-import React, { useCallback, useMemo, useState } from 'react';
-import Plan from '../../models/Plan.model';
+import React, { useCallback, useState } from 'react';
+import { useSelector } from 'react-redux';
 import PlanCard from '../../components/PlanCard';
 import RadioBtn from '../../components/RadioBtn';
+import Loading from '../../components/Loading';
 import './styles.css';
 
 
 const PlansScreen = () => {
 
-  const plans = useMemo(() => [
-    new Plan('Standard', 9, 'montly', ['Unlimit search', '10 apps', 'Group calls']),
-    new Plan('Advanced', 15, 'montly', ['Advance admin control', 'Domain verification', 'Message exports']),
-    new Plan('Enterprice', undefined, 'yearly', ['Unlimit worspaces', 'Data loss prevention', 'Network control']),
-  ], []);
+  const {plans, loading} = useSelector(state => state.plans);
 
   const [billTime, setBillTime] = useState('montly');
 
@@ -38,6 +35,7 @@ const PlansScreen = () => {
           value="yearly" />
       </div>
       <div className="plans">
+        {loading && <Loading />}
         {selectedPlans.map(
           (plan, index) => <PlanCard key={index} {...plan} />
         )}
