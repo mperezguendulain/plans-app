@@ -1,0 +1,16 @@
+.price-box {
+  position: absolute;
+  top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-box .money {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.price-box .label {
+  font-size: small;
+  color: #6c748a;
+}

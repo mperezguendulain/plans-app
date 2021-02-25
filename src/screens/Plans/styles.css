@@ -1,0 +1,23 @@
+.plans-screnn {
+  min-height: 100vh;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f8fc;
+}
+
+.plans {
+  display: flex;
+}
+
+.options {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: x-large;
+}
