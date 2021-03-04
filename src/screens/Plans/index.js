@@ -20,7 +20,9 @@ const PlansScreen = () => {
 
   return (
     <div className="plans-screnn">
-      <header className="title">Find the best plan for you</header>
+      <header>
+        <span className="title">Find the best plan for you</span>
+      </header>
       <div className="options">
         <RadioBtn
           label="Billed montly"

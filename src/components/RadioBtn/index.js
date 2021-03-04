@@ -8,6 +8,11 @@ const RadioBtn = ({
   value,
   label
 }) => {
+
+  /**
+   * In the next code I am using 'id', this is necesary for the styles working well
+   * Instead of use 'id' is recommended to use 'ref'.
+   */
   return (
     <p>
       <input
@@ -20,6 +25,7 @@ const RadioBtn = ({
       <label htmlFor={value}>{label}</label>
     </p>
   );
+
 };
 
 RadioBtn.propTypes = {
